@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 import { CreateMovieDto } from 'src/movies/dtos/CreateMovie.dto';
 import { UpdateMovieDto } from 'src/movies/dtos/UpdateMovie.dto';
-import { MoviesService } from 'src/movies/services/movies/movies.service';
+import { MoviesService } from 'src/movies/movies.service';
 
 @Controller('api/movies')
 export class MoviesController {

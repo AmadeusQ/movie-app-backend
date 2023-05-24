@@ -12,7 +12,7 @@ import { Watchlist } from './typeorm/entities/Watchlist';
 import { ActorsModule } from './actors/actors.module';
 import { MoviesModule } from './movies/movies.module';
 import { UsersModule } from './users/users.module';
-import { AuthModule } from './auth/auth.module';
+// import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 import { AdminsModule } from './admins/admins.module';
 import { DefaultUser } from './typeorm/entities/DefaultUser';
@@ -50,7 +50,7 @@ dotenv.config();
     ActorsModule,
     MoviesModule,
     UsersModule,
-    AuthModule,
+    // AuthModule,
     AdminsModule,
     GenresModule,
   ],

@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { UsersService } from 'src/users/services/users/users.service';
+import { UsersService } from 'src/users/users.service';
 import { comparePasswords, encodePassword } from 'src/utils/bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { RegisterUserParams, SignInUserParams } from 'src/utils/types';

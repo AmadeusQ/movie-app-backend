@@ -4,4 +4,5 @@ export class CreateMovieDto {
   releaseYear: number;
   movieUrl: string;
   moviePosterUrl: string;
+  duration: number;
 }

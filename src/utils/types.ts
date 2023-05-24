@@ -9,6 +9,7 @@ export type CreateMovieParams = {
   releaseYear: number;
   movieUrl: string;
   moviePosterUrl: string;
+  duration: number;
 };
 
 export type UpdateMovieParams = {
@@ -17,6 +18,7 @@ export type UpdateMovieParams = {
   releaseYear: number;
   movieUrl: string;
   moviePosterUrl: string;
+  duration: number;
 };
 
 export type RegisterUserParams = {

@@ -9,8 +9,8 @@ import {
   Post,
 } from '@nestjs/common';
 import { UpdateUserDto } from 'src/users/dtos/UpdateUser.dto';
-import { UsersMovieListsService } from 'src/users/services/users-movie-lists/users-movie-lists.service';
-import { UsersService } from 'src/users/services/users/users.service';
+import { UsersMovieListsService } from 'src/users/users-movie-lists.service';
+import { UsersService } from 'src/users/users.service';
 import { MovieId } from 'src/utils/types';
 
 @Controller('api/users')
