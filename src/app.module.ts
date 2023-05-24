@@ -14,9 +14,7 @@ import { MoviesModule } from './movies/movies.module';
 import { UsersModule } from './users/users.module';
 // import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
-import { AdminsModule } from './admins/admins.module';
-import { DefaultUser } from './typeorm/entities/DefaultUser';
-import { Admin } from './typeorm/entities/Admin';
+import { User } from './typeorm/entities/User';
 import { Token } from './typeorm/entities/Token';
 import { GenresModule } from './genres/genres.module';
 import * as dotenv from 'dotenv';
@@ -35,8 +33,7 @@ dotenv.config();
       database: process.env.MYSQL_DATABASE,
       entities: [
         Actor,
-        DefaultUser,
-        Admin,
+        User,
         Favoritelist,
         Genre,
         Movie,
@@ -51,7 +48,6 @@ dotenv.config();
     MoviesModule,
     UsersModule,
     // AuthModule,
-    AdminsModule,
     GenresModule,
   ],
   controllers: [AppController],

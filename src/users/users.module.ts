@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { UsersController } from './users.controller';
 import { UsersService } from './users.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DefaultUser } from 'src/typeorm/entities/DefaultUser';
+import { User } from 'src/typeorm/entities/User';
 import { Watchedlist } from 'src/typeorm/entities/Watchedlist';
 import { Watchlist } from 'src/typeorm/entities/Watchlist';
 import { Favoritelist } from 'src/typeorm/entities/Favoritelist';
@@ -12,7 +12,7 @@ import { Token } from 'src/typeorm/entities/Token';
 @Module({
   imports: [
     TypeOrmModule.forFeature([
-      DefaultUser,
+      User,
       Watchedlist,
       Watchlist,
       Favoritelist,

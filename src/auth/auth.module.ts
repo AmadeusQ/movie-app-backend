@@ -6,11 +6,11 @@
 // import { jwtConstants } from './constants/constants';
 // import { TypeOrmModule } from '@nestjs/typeorm';
 // import { Token } from 'src/typeorm/entities/Token';
-// import { DefaultUser } from 'src/typeorm/entities/DefaultUser';
+// import { User } from 'src/typeorm/entities/User';
 
 // @Module({
 //   imports: [
-//     TypeOrmModule.forFeature([Token, DefaultUser]),
+//     TypeOrmModule.forFeature([Token, User]),
 //     UsersModule,
 //     JwtModule.register({
 //       global: true,

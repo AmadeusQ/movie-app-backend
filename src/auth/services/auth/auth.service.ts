@@ -4,7 +4,7 @@ import { comparePasswords, encodePassword } from 'src/utils/bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { RegisterUserParams, SignInUserParams } from 'src/utils/types';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DefaultUser } from 'src/typeorm/entities/DefaultUser';
+import { User } from 'src/typeorm/entities/User';
 import { Repository } from 'typeorm';
 import { Token } from 'src/typeorm/entities/Token';
 
@@ -13,8 +13,8 @@ export class AuthService {
   constructor(
     private usersService: UsersService,
     private jwtService: JwtService,
-    @InjectRepository(DefaultUser)
-    private userRepository: Repository<DefaultUser>,
+    @InjectRepository(User)
+    private userRepository: Repository<User>,
     @InjectRepository(Token)
     private tokenRepository: Repository<Token>,
   ) {}

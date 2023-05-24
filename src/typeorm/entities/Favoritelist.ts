@@ -6,7 +6,7 @@ import {
   Column,
 } from 'typeorm';
 import { Movie } from './Movie';
-import { DefaultUser } from './DefaultUser';
+import { User } from './User';
 
 @Entity({ name: 'favoritelists' })
 export class Favoritelist {
@@ -19,9 +19,9 @@ export class Favoritelist {
   @Column()
   movieId: number;
 
-  @ManyToOne(() => DefaultUser, (user) => user.favoritelists)
+  @ManyToOne(() => User, (user) => user.favoritelists)
   @JoinColumn({ name: 'userId', referencedColumnName: 'userId' })
-  user: DefaultUser;
+  user: User;
 
   @ManyToOne(() => Movie, (movie) => movie.favoritelists)
   @JoinColumn({ name: 'movieId', referencedColumnName: 'movieId' })

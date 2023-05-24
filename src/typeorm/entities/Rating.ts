@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 import { Movie } from './Movie';
-import { DefaultUser } from './DefaultUser';
+import { User } from './User';
 
 @Entity({ name: 'ratings' })
 export class Rating {
@@ -10,8 +10,8 @@ export class Rating {
   @Column()
   rating: number;
 
-  @ManyToOne(() => DefaultUser, (user) => user.ratings)
-  user: DefaultUser;
+  @ManyToOne(() => User, (user) => user.ratings)
+  user: User;
 
   @ManyToOne(() => Movie, (movie) => movie.ratings)
   movie: Movie;

@@ -7,7 +7,7 @@ import { Rating } from './Rating';
 import { Token } from './Token';
 
 @Entity({ name: 'users' })
-export class DefaultUser {
+export class User {
   @PrimaryGeneratedColumn()
   userId: number;
 
@@ -16,6 +16,9 @@ export class DefaultUser {
 
   @Column({ nullable: false })
   password: string;
+
+  @Column({ default: 'user' })
+  role: string;
 
   @OneToMany(() => Watchlist, (watchlist) => watchlist.user)
   watchlists: Watchlist[];

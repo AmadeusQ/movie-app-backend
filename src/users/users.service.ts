@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DefaultUser } from 'src/typeorm/entities/DefaultUser';
+import { User } from 'src/typeorm/entities/User';
 import { Token } from 'src/typeorm/entities/Token';
 import { UpdateUserParams } from 'src/utils/types';
 import { Repository } from 'typeorm';
@@ -8,8 +8,8 @@ import { Repository } from 'typeorm';
 @Injectable()
 export class UsersService {
   constructor(
-    @InjectRepository(DefaultUser)
-    private userRepository: Repository<DefaultUser>,
+    @InjectRepository(User)
+    private userRepository: Repository<User>,
     @InjectRepository(Token)
     private tokenRepository: Repository<Token>,
   ) {}

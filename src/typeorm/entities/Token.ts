@@ -1,4 +1,4 @@
-import { DefaultUser } from './DefaultUser';
+import { User } from './User';
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -18,7 +18,7 @@ export class Token {
   @Column()
   token: string;
 
-  @ManyToOne(() => DefaultUser, (user) => user.tokens)
+  @ManyToOne(() => User, (user) => user.tokens)
   @JoinColumn({ name: 'userId', referencedColumnName: 'userId' })
-  user: DefaultUser;
+  user: User;
 }
